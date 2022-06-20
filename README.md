@@ -35,3 +35,8 @@ WithTraceHttpMiddleware::class
 ### tracking
 
 put header   X-Trace-Id:Any string
+
+
+### example
+
+[2022-06-20 20:37:49] local.INFO: hello trace id   [62b06a1d42fe8]
