@@ -1,5 +1,9 @@
 {
     "name": "kphcdr/laravel-trace-id",
+    "description": "a simple encypt/decrypt class",
+    "type": "library",
+    "keywords": ["traceid"],
+    "license": "MIT",
     "require": {
         "monolog/monolog": "^2.0"
     },
