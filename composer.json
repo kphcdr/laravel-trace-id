@@ -1,6 +1,6 @@
 {
     "name": "kphcdr/laravel-trace-id",
-    "description": "a simple encypt/decrypt class",
+    "description": "laravel log append trace id",
     "type": "library",
     "keywords": ["traceid"],
     "license": "MIT",
