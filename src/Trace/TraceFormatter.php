@@ -7,8 +7,8 @@ use Monolog\Utils;
 
 class TraceFormatter extends NormalizerFormatter
 {
-    public const SIMPLE_FORMAT = "[%datetime%][%traceId%] %channel%.%level_name%: %message% %context% %extra%\n";
-
+    public const SIMPLE_FORMAT = "[%datetime%] %channel%.%level_name%: %message% %context% %extra% [%traceId%]\n";
+    public const SIMPLE_DATA_FORMAT = "Y-m-d H:i:s";
     protected $format;
     protected $allowInlineLineBreaks;
     protected $ignoreEmptyContextAndExtra;
@@ -25,7 +25,7 @@ class TraceFormatter extends NormalizerFormatter
         $this->format = $format === null ? static::SIMPLE_FORMAT : $format;
         $this->allowInlineLineBreaks = $allowInlineLineBreaks;
         $this->ignoreEmptyContextAndExtra = $ignoreEmptyContextAndExtra;
-        parent::__construct($dateFormat);
+        parent::__construct($dateFormat?:self::SIMPLE_DATA_FORMAT);
     }
 
     public function includeStacktraces(bool $include = true)
