@@ -7,7 +7,7 @@ use Monolog\Utils;
 
 class TraceFormatter extends NormalizerFormatter
 {
-    public const SIMPLE_FORMAT = "[%datetime%] %channel%.%level_name%: %message% %context% %extra% [%traceId%]\n";
+    public const SIMPLE_FORMAT = "[%traceId%][%datetime%] %channel%.%level_name%: %message% %context% %extra%\n";
     public const SIMPLE_DATA_FORMAT = "Y-m-d H:i:s";
     protected $format;
     protected $allowInlineLineBreaks;
